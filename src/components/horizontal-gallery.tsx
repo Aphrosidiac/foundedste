@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 import Image from "next/image";
 
@@ -61,12 +61,28 @@ function GalleryCard({
 
 export function HorizontalGallery() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
+  const [xEnd, setXEnd] = useState(-62);
+
+  useEffect(() => {
+    function measure() {
+      if (!trackRef.current) return;
+      const trackW = trackRef.current.scrollWidth;
+      const viewW = window.innerWidth;
+      const pct = ((trackW - viewW) / trackW) * 100;
+      setXEnd(-pct);
+    }
+    measure();
+    window.addEventListener("resize", measure);
+    return () => window.removeEventListener("resize", measure);
+  }, []);
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end end"],
   });
 
-  const x = useTransform(scrollYProgress, [0.05, 0.95], ["0%", "-62%"]);
+  const x = useTransform(scrollYProgress, [0.05, 0.95], ["0%", `${xEnd}%`]);
   const progressWidth = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   const labelOpacity = useTransform(
@@ -101,6 +117,7 @@ export function HorizontalGallery() {
 
         {/* Gallery track */}
         <motion.div
+          ref={trackRef}
           className="flex gap-4 md:gap-6 pl-8 md:pl-16 pr-8 items-center"
           style={{ x }}
         >

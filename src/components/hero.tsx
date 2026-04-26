@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useEffect, useState, useCallback } from "react";
-import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 
 const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%&*!?/\\|{}[]<>";
@@ -75,23 +75,19 @@ function HeroLine({
   text,
   delay,
   strokeClass,
-  scrollY,
 }: {
   text: string;
   delay: number;
   strokeClass?: boolean;
-  scrollY: MotionValue<number>;
 }) {
   return (
     <div className="overflow-hidden relative">
-      <motion.div style={{ y: scrollY }}>
-        <ScrambleText
-          text={text}
-          delay={delay}
-          strokeClass={strokeClass}
-          className="font-display text-[clamp(3.5rem,13vw,12rem)] leading-[0.85] tracking-tight uppercase"
-        />
-      </motion.div>
+      <ScrambleText
+        text={text}
+        delay={delay}
+        strokeClass={strokeClass}
+        className="font-display text-[clamp(3.5rem,13vw,12rem)] leading-[0.85] tracking-tight uppercase"
+      />
     </div>
   );
 }
@@ -103,9 +99,8 @@ export function Hero() {
     offset: ["start start", "end start"],
   });
 
-  const y1 = useTransform(scrollYProgress, [0, 1], [0, -100]);
-  const y2 = useTransform(scrollYProgress, [0, 1], [0, -200]);
-  const opacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
+  const textY = useTransform(scrollYProgress, [0, 0.6], [0, -120]);
+  const textOpacity = useTransform(scrollYProgress, [0, 0.4], [1, 0]);
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
   const imgBrightness = useTransform(scrollYProgress, [0, 1], [1, 0.3]);
 
@@ -133,8 +128,8 @@ export function Hero() {
       </motion.div>
 
       <motion.div
-        className="relative z-10 w-full px-6 md:px-12 pb-12 md:pb-20"
-        style={{ opacity }}
+        className="relative z-10 w-full px-6 md:px-12 pb-28 md:pb-20"
+        style={{ opacity: textOpacity, y: textY }}
       >
         <div className="max-w-[1400px] mx-auto">
           <motion.div
@@ -148,8 +143,8 @@ export function Hero() {
             </span>
           </motion.div>
 
-          <HeroLine text="FROM" delay={800} scrollY={y1} />
-          <HeroLine text="THE VOID" delay={1100} strokeClass scrollY={y2} />
+          <HeroLine text="FROM" delay={800} />
+          <HeroLine text="THE VOID" delay={1100} strokeClass />
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
