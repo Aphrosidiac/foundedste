@@ -110,7 +110,7 @@ function ArchiveCard({
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <div className="relative aspect-[3/4] overflow-hidden bg-smoke/5">
+      <div className="relative aspect-[3/4] overflow-hidden bg-void rounded-[1px]">
         <Image
           src={piece.image}
           alt={piece.name}

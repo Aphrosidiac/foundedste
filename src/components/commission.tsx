@@ -78,7 +78,7 @@ export function Commission() {
         <motion.div
           ref={videoRef}
           style={{ scale: videoScale, opacity: videoOpacity }}
-          className="relative aspect-video md:aspect-[21/9] overflow-hidden bg-smoke/5 mb-16 md:mb-24"
+          className="relative aspect-video md:aspect-[21/9] overflow-hidden bg-void rounded-[1px] mb-16 md:mb-24"
         >
           <video
             autoPlay
@@ -159,7 +159,7 @@ function CommissionCard({
       }}
       className="group"
     >
-      <div className="relative aspect-[3/4] overflow-hidden bg-smoke/5">
+      <div className="relative aspect-[3/4] overflow-hidden bg-void rounded-[1px]">
         <Image
           src={example.src}
           alt={example.alt}

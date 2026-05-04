@@ -96,7 +96,7 @@ function ProductCard({
       className={`group ${span ? "col-span-2" : ""}`}
     >
       <div
-        className={`relative overflow-hidden bg-smoke/5 ${
+        className={`relative overflow-hidden bg-void rounded-[1px] ${
           span ? "aspect-[2/1]" : "aspect-[3/4]"
         }`}
       >
