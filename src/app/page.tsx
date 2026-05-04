@@ -9,6 +9,8 @@ import { Collection } from "@/components/collection";
 import { SectionDivider } from "@/components/section-divider";
 import { Featured } from "@/components/featured";
 import { HorizontalGallery } from "@/components/horizontal-gallery";
+import { Archive } from "@/components/archive";
+import { Commission } from "@/components/commission";
 import { Lookbook } from "@/components/lookbook";
 import { About } from "@/components/about";
 import { Footer } from "@/components/footer";
@@ -28,7 +30,11 @@ export default function Home() {
         <Featured />
         <SectionDivider />
         <HorizontalGallery />
+        <SectionDivider label="Archive" />
+        <Archive />
         <Marquee />
+        <SectionDivider label="Commission" />
+        <Commission />
         <Lookbook />
         <SectionDivider label="Manifesto" />
         <About />

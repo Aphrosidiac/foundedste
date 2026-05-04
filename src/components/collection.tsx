@@ -6,50 +6,61 @@ import Image from "next/image";
 
 const products = [
   {
-    name: "Thorned Awakening Polo",
-    image: "/images/black-polo-tribal.jpg",
-    price: "RM 189",
+    name: "Cat Boxy Tee",
+    image: "/images/collection/cat-tee.jpg",
+    price: "RM 69",
+    detail: "Full Cotton 230GSM",
   },
   {
-    name: "Skeletal Motion Polo",
-    image: "/images/black-polo-skeleton.jpg",
-    price: "RM 189",
+    name: "Cyber Sweatpants",
+    image: "/images/collection/cyber-pants.jpg",
+    price: "RM 99",
+    detail: "Cotton Fleece 280GSM",
   },
   {
-    name: "Abyssal Mark Polo",
-    image: "/images/navy-polo-front.jpg",
-    price: "RM 189",
+    name: "Hand-Painted Polo",
+    image: "/images/collection/painted-polo.jpg",
+    price: "RM 129",
+    detail: "1of1 Hand-Painted",
+    sold: true,
   },
   {
-    name: "Thorned Crown Detail",
-    image: "/images/skull-thorns.jpg",
-    price: "RM 209",
+    name: "Hand-Painted Jeans",
+    image: "/images/collection/painted-jeans.jpg",
+    price: "RM 129",
+    detail: "1of1 Hand-Painted",
     span: true,
   },
   {
-    name: "Dark Ritual Polo",
-    image: "/images/brown-polo-combo.jpg",
-    price: "RM 199",
+    name: "Cat Tee Detail",
+    image: "/images/collection/cat-tee-back.jpg",
+    price: "RM 69",
+    detail: "Boxy Cut",
   },
   {
-    name: "Checked Anatomy Shirt",
-    image: "/images/check-shirt-back.jpg",
-    price: "RM 219",
+    name: "Painted Polo Detail",
+    image: "/images/collection/painted-polo-2.jpg",
+    price: "RM 129",
+    detail: "Skull & Thorns",
+    sold: true,
   },
   {
-    name: "Venom Stripe Polo",
-    image: "/images/grey-polo-back.jpg",
-    price: "RM 179",
+    name: "Custom Cap",
+    image: "/images/collection/painted-cap.jpg",
+    price: "Commission",
+    detail: "Hand-Painted",
   },
   {
-    name: "Abyssal Front",
-    image: "/images/black-polo-front.jpg",
-    price: "RM 189",
+    name: "Jeans Detail",
+    image: "/images/collection/painted-jeans-detail.jpg",
+    price: "RM 129",
+    detail: "Sword & Thorns",
   },
   {
-    name: "Anatomy Detail Shirt",
-    image: "/images/check-shirt-detail.jpg",
-    price: "RM 219",
+    name: "Cyber Sweatpants Alt",
+    image: "/images/collection/cyber-pants-alt.jpg",
+    price: "RM 99",
+    detail: "Baggy Cut",
   },
 ];
 
@@ -99,12 +110,23 @@ function ProductCard({
           />
         </motion.div>
         <div className="absolute inset-0 bg-void/10 group-hover:bg-transparent transition-colors duration-500" />
+
+        {product.sold && (
+          <div className="absolute top-4 left-4 px-3 py-1 bg-void/70 backdrop-blur-sm border border-smoke/30">
+            <span className="text-[9px] tracking-[0.3em] text-ember uppercase">Sold</span>
+          </div>
+        )}
       </div>
 
       <div className="mt-4 flex items-baseline justify-between">
-        <h3 className="text-xs tracking-[0.12em] text-bone/80 uppercase group-hover:text-bone transition-colors duration-500">
-          {product.name}
-        </h3>
+        <div>
+          <h3 className="text-xs tracking-[0.12em] text-bone/80 uppercase group-hover:text-bone transition-colors duration-500">
+            {product.name}
+          </h3>
+          <span className="text-[10px] tracking-[0.08em] text-ash/40 uppercase mt-0.5 block">
+            {product.detail}
+          </span>
+        </div>
         <span className="text-[11px] tracking-[0.1em] text-ash/60">
           {product.price}
         </span>
@@ -153,7 +175,7 @@ export function Collection() {
             transition={{ delay: 0.6, duration: 1 }}
             className="hidden md:block text-[10px] tracking-[0.3em] text-ash/40 uppercase"
           >
-            {products.length} Pieces
+            DM to Purchase
           </motion.span>
         </div>
 

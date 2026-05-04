@@ -5,11 +5,11 @@ import { motion, useInView, useScroll, useTransform, useMotionValue, useSpring }
 import Image from "next/image";
 
 const lookbookImages = [
-  { src: "/images/black-polo-front.jpg", alt: "Black polo front detail" },
-  { src: "/images/brown-polo-combo.jpg", alt: "Brown polo combination" },
-  { src: "/images/check-shirt-detail.jpg", alt: "Check shirt detail" },
-  { src: "/images/check-shirt-front.jpg", alt: "Check shirt front" },
-  { src: "/images/grey-polo-back.jpg", alt: "Grey polo back" },
+  { src: "/images/collection/painted-polo.jpg", alt: "Hand-painted polo on concrete" },
+  { src: "/images/collection/painted-jeans-2.jpg", alt: "Hand-painted jeans front" },
+  { src: "/images/archive/hoodie-2.jpg", alt: "Custom hoodie back detail" },
+  { src: "/images/archive/shirt-chambray.jpg", alt: "Custom chambray shirt" },
+  { src: "/images/collection/painted-cap-2.jpg", alt: "Hand-painted cap detail" },
 ];
 
 function TiltImage({
@@ -117,7 +117,7 @@ export function Lookbook() {
                 transition={{ duration: 1, ease: [0.77, 0, 0.175, 1] }}
                 className="block text-[10px] tracking-[0.5em] text-ash uppercase mb-4"
               >
-                ( 002 )
+                ( 003 )
               </motion.span>
             </div>
             <div className="overflow-hidden">
@@ -141,8 +141,8 @@ export function Lookbook() {
             transition={{ duration: 1, delay: 0.5 }}
             className="hidden md:block text-ash text-xs tracking-wider max-w-[280px] text-right leading-relaxed"
           >
-            Each garment carries hand-rendered illustrations — every thread a
-            deliberate mark in the darkness.
+            From thrifted reworks to hand-painted originals — every
+            piece carries the mark of dark artistry.
           </motion.p>
         </div>
 

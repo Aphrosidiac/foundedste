@@ -115,10 +115,10 @@ export function Hero() {
           style={{ filter: useTransform(imgBrightness, (v) => `brightness(${v})`) }}
         >
           <Image
-            src="/images/skull-thorns.jpg"
-            alt="FOUNDED skull thorns artwork"
+            src="/images/collection/painted-polo.jpg"
+            alt="FOUNDED hand-painted polo on concrete"
             fill
-            className="object-cover"
+            className="object-cover object-center"
             quality={90}
             priority
           />
@@ -139,7 +139,7 @@ export function Hero() {
             className="mb-6"
           >
             <span className="text-[10px] md:text-xs tracking-[0.5em] text-ash uppercase block mb-4">
-              Drop 001 — Awakening
+              Hand-Painted — 1 of 1
             </span>
           </motion.div>
 
@@ -153,9 +153,9 @@ export function Hero() {
             className="mt-8 md:mt-12 flex items-end justify-between"
           >
             <p className="text-ash text-xs md:text-sm max-w-xs leading-relaxed tracking-wide">
-              Hand-illustrated dark art on reimagined silhouettes.
+              Dark art streetwear from Malaysia.
               <br />
-              Each piece born from chaos, crafted with precision.
+              Hand-illustrated. Hand-painted. One of one.
             </p>
             <motion.div
               animate={{ y: [0, 8, 0] }}

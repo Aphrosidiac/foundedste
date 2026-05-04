@@ -5,11 +5,13 @@ import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 import Image from "next/image";
 
 const galleryImages = [
-  { src: "/images/black-polo-front.jpg", alt: "Black polo front", caption: "Abyssal Mark", detail: "Front View" },
-  { src: "/images/skull-thorns.jpg", alt: "Skull thorns detail", caption: "Thorned Crown", detail: "Detail" },
-  { src: "/images/check-shirt-detail.jpg", alt: "Check shirt detail", caption: "Anatomy Check", detail: "Close-Up" },
-  { src: "/images/brown-polo-combo.jpg", alt: "Brown polo combo", caption: "Dark Ritual", detail: "Full Piece" },
-  { src: "/images/grey-polo-back.jpg", alt: "Grey polo back", caption: "Striped Venom", detail: "Back View" },
+  { src: "/images/collection/painted-jeans-detail.jpg", alt: "Hand-painted jeans detail", caption: "Sword & Thorns", detail: "Hand-Painted" },
+  { src: "/images/archive/hoodie.jpg", alt: "Custom hoodie cybersigilism", caption: "Cybersigilism Hoodie", detail: "1of1 Custom" },
+  { src: "/images/collection/painted-polo-3.jpg", alt: "Hand-painted polo detail", caption: "Dark Ritual Polo", detail: "Hand-Painted" },
+  { src: "/images/archive/zipper-shirt.jpg", alt: "Custom zipper shirt", caption: "Anatomy Zipper", detail: "1of1 Custom" },
+  { src: "/images/collection/painted-cap.jpg", alt: "Hand-painted cap in garden", caption: "Commission Cap", detail: "Hand-Painted" },
+  { src: "/images/archive/shirt-dark-2.jpg", alt: "Custom shirt detail", caption: "Thorned Shirt", detail: "1of1 Custom" },
+  { src: "/images/collection/painted-jeans.jpg", alt: "Hand-painted denim", caption: "Painted Denim", detail: "Hand-Painted" },
 ];
 
 function GalleryCard({
@@ -23,7 +25,7 @@ function GalleryCard({
 }) {
   const yOffset = useTransform(
     scrollProgress,
-    [index * 0.12, index * 0.12 + 0.4],
+    [index * 0.1, index * 0.1 + 0.4],
     [index % 2 === 0 ? 40 : -40, 0]
   );
 
@@ -94,7 +96,6 @@ export function HorizontalGallery() {
   return (
     <section ref={containerRef} className="relative h-[300vh]">
       <div className="sticky top-0 h-screen flex flex-col justify-center overflow-hidden">
-        {/* Header */}
         <motion.div
           className="px-8 md:px-16 mb-8 flex items-center justify-between"
           style={{ opacity: labelOpacity }}
@@ -115,7 +116,6 @@ export function HorizontalGallery() {
           </div>
         </motion.div>
 
-        {/* Gallery track */}
         <motion.div
           ref={trackRef}
           className="flex gap-4 md:gap-6 pl-8 md:pl-16 pr-8 items-center"
@@ -131,7 +131,6 @@ export function HorizontalGallery() {
           ))}
         </motion.div>
 
-        {/* Footer hint */}
         <motion.div
           className="px-8 md:px-16 mt-8 flex justify-between items-center"
           style={{ opacity: labelOpacity }}
@@ -140,7 +139,6 @@ export function HorizontalGallery() {
             Scroll to explore
           </span>
 
-          {/* Dot pagination */}
           <div className="flex gap-2">
             {galleryImages.map((_, i) => {
               const dotStart = i / galleryImages.length;

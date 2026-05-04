@@ -4,8 +4,7 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
 const footerLinks = [
-  { label: "Instagram", href: "#" },
-  { label: "Twitter / X", href: "#" },
+  { label: "Instagram", href: "https://instagram.com/founded.ste" },
   { label: "Shopee", href: "#" },
 ];
 
@@ -65,6 +64,8 @@ export function Footer() {
                 <motion.a
                   key={link.label}
                   href={link.href}
+                  target={link.href.startsWith("http") ? "_blank" : undefined}
+                  rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
                   initial={{ opacity: 0, x: -20 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{
@@ -90,11 +91,16 @@ export function Footer() {
                 Inquiries
               </span>
               <a
-                href="mailto:founded@founded.my"
+                href="https://instagram.com/founded.ste"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-sm tracking-[0.1em] text-bone hover:text-ember transition-colors duration-500"
               >
-                founded@founded.my
+                @founded.ste
               </a>
+              <p className="text-[10px] tracking-[0.1em] text-ash/40 mt-2 leading-relaxed">
+                DM for purchases,<br />commissions &amp; collabs
+              </p>
             </motion.div>
           </div>
         </div>

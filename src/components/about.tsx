@@ -78,7 +78,7 @@ export function About() {
                 }}
                 className="block text-[10px] tracking-[0.5em] text-ash uppercase mb-8"
               >
-                ( 003 ) — Manifesto
+                ( 005 ) — Manifesto
               </motion.span>
 
               {manifestoLines.map((line, i) => (

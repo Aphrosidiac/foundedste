@@ -29,8 +29,8 @@ export function Featured() {
               style={{ y: imageY, scale: imageScale }}
             >
               <Image
-                src="/images/skull-thorns.jpg"
-                alt="FOUNDED signature piece"
+                src="/images/archive/hoodie.jpg"
+                alt="FOUNDED custom hoodie with cybersigilism artwork"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 40vw"
@@ -91,9 +91,9 @@ export function Featured() {
               className="text-ash text-sm leading-[1.8] tracking-wide max-w-md"
             >
               Every FOUNDED piece begins as raw illustration — skulls, thorns,
-              and organic forms drawn by hand before being translated onto
-              fabric. We take classic silhouettes and consume them with dark
-              artistry. Not decoration. Transformation.
+              and biomechanical forms drawn by hand. We take thrifted polo shirts,
+              classic silhouettes, and denim — then consume them with dark artistry
+              through screen printing, hand-painting, and custom rework.
             </motion.p>
 
             <motion.div
@@ -103,16 +103,16 @@ export function Featured() {
               className="flex items-center gap-6"
             >
               <div className="flex flex-col">
-                <span className="font-display text-3xl text-bone">100%</span>
+                <span className="font-display text-3xl text-bone">1/1</span>
                 <span className="text-[10px] tracking-[0.3em] text-ash uppercase mt-1">
-                  Hand Illustrated
+                  Every Piece
                 </span>
               </div>
               <div className="w-[1px] h-12 bg-smoke/30" />
               <div className="flex flex-col">
-                <span className="font-display text-3xl text-bone">LTD</span>
+                <span className="font-display text-3xl text-bone">40+</span>
                 <span className="text-[10px] tracking-[0.3em] text-ash uppercase mt-1">
-                  Edition Runs
+                  Pieces Sold
                 </span>
               </div>
               <div className="w-[1px] h-12 bg-smoke/30" />
