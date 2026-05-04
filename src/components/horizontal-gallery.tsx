@@ -6,11 +6,11 @@ import Image from "next/image";
 
 const galleryImages = [
   { src: "/images/collection/painted-jeans-detail.jpg", alt: "Hand-painted jeans detail", caption: "Sword & Thorns", detail: "Hand-Painted" },
-  { src: "/images/archive/hoodie.jpg", alt: "Custom hoodie cybersigilism", caption: "Cybersigilism Hoodie", detail: "1of1 Custom" },
-  { src: "/images/collection/painted-polo-3.jpg", alt: "Hand-painted polo detail", caption: "Dark Ritual Polo", detail: "Hand-Painted" },
-  { src: "/images/archive/zipper-shirt.jpg", alt: "Custom zipper shirt", caption: "Anatomy Zipper", detail: "1of1 Custom" },
-  { src: "/images/collection/painted-cap.jpg", alt: "Hand-painted cap in garden", caption: "Commission Cap", detail: "Hand-Painted" },
-  { src: "/images/archive/shirt-dark-2.jpg", alt: "Custom shirt detail", caption: "Thorned Shirt", detail: "1of1 Custom" },
+  { src: "/images/collection/painted-polo-4.jpg", alt: "Hand-painted polo close-up", caption: "Thorn Detail", detail: "Hand-Painted" },
+  { src: "/images/collection/painted-polo-3.jpg", alt: "Hand-painted polo back", caption: "Dark Ritual Polo", detail: "Hand-Painted" },
+  { src: "/images/collection/painted-jeans-3.jpg", alt: "Hand-painted jeans side", caption: "Painted Denim", detail: "Hand-Painted" },
+  { src: "/images/collection/painted-cap.jpg", alt: "Hand-painted cap", caption: "Commission Cap", detail: "Hand-Painted" },
+  { src: "/images/collection/painted-jeans-4.jpg", alt: "Hand-painted jeans back", caption: "Star & Thorn Jeans", detail: "Hand-Painted" },
   { src: "/images/collection/painted-jeans.jpg", alt: "Hand-painted denim", caption: "Painted Denim", detail: "Hand-Painted" },
 ];
 

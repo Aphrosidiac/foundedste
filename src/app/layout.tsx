@@ -12,7 +12,21 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "FOUNDED — Dark Art Streetwear",
   description:
-    "Where darkness meets craft. Hand-illustrated streetwear born from the void.",
+    "Dark art streetwear from Malaysia. Hand-illustrated, hand-painted, one of one. Skulls, thorns, and biomechanical forms on reworked silhouettes.",
+  openGraph: {
+    title: "FOUNDED — Dark Art Streetwear",
+    description:
+      "Hand-illustrated dark art on reimagined silhouettes. Every piece born from chaos, crafted with precision.",
+    images: ["/images/collection/painted-polo.jpg"],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "FOUNDED — Dark Art Streetwear",
+    description:
+      "Hand-illustrated dark art on reimagined silhouettes. Every piece born from chaos, crafted with precision.",
+    images: ["/images/collection/painted-polo.jpg"],
+  },
 };
 
 export default function RootLayout({

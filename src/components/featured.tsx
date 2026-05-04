@@ -29,8 +29,8 @@ export function Featured() {
               style={{ y: imageY, scale: imageScale }}
             >
               <Image
-                src="/images/archive/hoodie.jpg"
-                alt="FOUNDED custom hoodie with cybersigilism artwork"
+                src="/images/collection/painted-polo-3.jpg"
+                alt="FOUNDED hand-painted polo back detail on concrete"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 40vw"

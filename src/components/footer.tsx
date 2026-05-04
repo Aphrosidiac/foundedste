@@ -5,7 +5,7 @@ import { motion, useInView } from "framer-motion";
 
 const footerLinks = [
   { label: "Instagram", href: "https://instagram.com/founded.ste" },
-  { label: "Shopee", href: "#" },
+  { label: "Shopee", href: "https://shopee.com.my" },
 ];
 
 export function Footer() {

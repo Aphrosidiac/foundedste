@@ -7,8 +7,8 @@ import Image from "next/image";
 const lookbookImages = [
   { src: "/images/collection/painted-polo.jpg", alt: "Hand-painted polo on concrete" },
   { src: "/images/collection/painted-jeans-2.jpg", alt: "Hand-painted jeans front" },
-  { src: "/images/archive/hoodie-2.jpg", alt: "Custom hoodie back detail" },
-  { src: "/images/archive/shirt-chambray.jpg", alt: "Custom chambray shirt" },
+  { src: "/images/collection/painted-polo-4.jpg", alt: "Hand-painted thorn artwork close-up" },
+  { src: "/images/collection/painted-jeans-3.jpg", alt: "Hand-painted jeans side view" },
   { src: "/images/collection/painted-cap-2.jpg", alt: "Hand-painted cap detail" },
 ];
 
